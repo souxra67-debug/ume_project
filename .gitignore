@@ -1,0 +1,19 @@
+# Sensitive files
+.env
+*.env
+
+# Python (Backend)
+venv/
+__pycache__/
+*.pyc
+*.sql
+
+# Node.js (Frontend)
+node_modules/
+.next/
+dist/
+build/
+
+# IDE / System
+.vscode/
+.DS_Store
