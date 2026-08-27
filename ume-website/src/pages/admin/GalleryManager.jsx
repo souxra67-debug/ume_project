@@ -11,8 +11,9 @@ function getFullImageUrl(path) {
 
 async function request(path, options = {}) {
   const url = `${API_URL}${path}`;
+  const token = localStorage.getItem('access_token'); 
   const config = {
-    headers: { 'Accept': 'application/json', ...options.headers },
+    headers: { 'Accept': 'application/json',  ...(token && { 'Authorization': `Bearer ${token}` }), ...options.headers },
     credentials: 'include',
     ...options,
   };
